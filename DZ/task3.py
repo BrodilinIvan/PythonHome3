@@ -12,3 +12,19 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+
+my_list = [7, 5, 3, 3, 2]
+num = int(input('Введите число от 0 до 9 '))
+
+
+def func_rating(lst, a):
+    for index in range(len(lst)):
+        if lst[index] < a:
+            lst.insert(index, a)
+            break
+        elif lst[index] >= a and len(lst) == (index + 1):
+            lst.append(a)
+    return lst
+
+
+print(func_rating(my_list, num))
